@@ -62,3 +62,8 @@ problems:
 --------------------------------------------------------
 TODO: 
 make sure bin/install works: !add --nodeenv for javascript package installation
+
+implement history?
+
+
+error checking and handling

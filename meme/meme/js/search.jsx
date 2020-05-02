@@ -22,9 +22,6 @@ function getFlickrUrl(tags) {
     return url;
 }
 
-function getGenerateUrl(img) {
-    let base = "/search";
-}
 
 class SearchObj extends React.Component {
     constructor(props) {
