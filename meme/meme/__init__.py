@@ -9,9 +9,9 @@ app = flask.Flask(__name__)  # pylint: disable=invalid-name
 # (Reference http://flask.pocoo.org/docs/patterns/packages/)  We're
 # going to tell pylint and pycodestyle to ignore this coding style violation.
 # import meme.api  # noqa: E402  pylint: disable=wrong-import-position
-from meme.main import search 
-from meme.main import generate
-from meme.main import test
+import meme.api
+import meme.views
+
 # from index.api.search import startup  # noqa: E402  pylint: disable=wrong-import-position
 
 # startup()
