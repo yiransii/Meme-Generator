@@ -9,6 +9,7 @@ def search():
 @meme.app.route('/generate/', methods=['GET', 'POST'])
 def generate():
     """Take user chosen img and generate meme."""
+
     img = flask.request.args.get('img', default='', type=str)
     return flask.render_template("generate.html")
 

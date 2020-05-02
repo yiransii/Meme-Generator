@@ -140,9 +140,10 @@ class SearchObj extends React.Component {
         console.log("img that got clicked: url");
         url += targetimg;
         console.log(url);
-        fetch(url, { method: 'POST'})
-
-        // or just use <a href=/generate/ + "img url"> just jump to the other 
+        window.location.replace(url);
+        // fetch(url, { method: 'POST'})
+        // or just use <a href=/generate/ + "img url"> just jump to the other
+        // or just use a bool(selected), and generate different things 
     }
 
     render() {
