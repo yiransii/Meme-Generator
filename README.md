@@ -1,7 +1,9 @@
 # Meme-Generator
 
 
-Task(s):
+--------------------------------------------------------
+
+How it works:
 
 1: provide an input that allows a user 
 
@@ -13,20 +15,21 @@ Task(s):
 
 5: allow a user to enter some text that appears above, below or as an overlay on top of the image
 
+--------------------------------------------------------
+Install Instruction:
+
+run the following command:
+./bin/install
+./bin/run
+
+open a browser and go to localhost:8000/search/
 
 --------------------------------------------------------
-Flickr APP KEY:
-*********Done! Here's the API key and secret for your new app:
-	meme
-Key:
-21464a195f014a8659b27ffc98d3ca7c
+Develop Notes:
 
-Secret:
-cfae3e283b73f9a2
+For javascript: npx webpack --watch 
 
---------------------------------------------------------
-Flickr API:
-
+Flickr API usage:
 1. The Photo Source URLs page in the documentation explains it:
 
 You can construct the source URL to a photo once you know its ID, server ID, farm ID, and secret, as returned by many API methods. The URL takes the following format:
@@ -55,15 +58,12 @@ generate:
 
 --------------------------------------------------------
 problems:
-1. javascript might not render..... 
-2. 
+
 
 
 --------------------------------------------------------
 TODO: 
 make sure bin/install works: !add --nodeenv for javascript package installation
-
+make it prettier 
 implement history?
-
-
 error checking and handling
