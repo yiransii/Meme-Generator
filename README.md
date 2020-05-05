@@ -48,6 +48,58 @@ A React/JS web app that lets user search pics, displays search results, then gen
 3. others:
     * please let me know: yiransi@umich.edu
 
+--------------------------------------------------------
+## Structures:
+
+* search:
+    * display input box, takes query
+    * fetch img from Flickr and display imgs
+    * if user lick on any img, jump to generate: <a href="/generate/img={img_url}">
+* generate:
+    * if request.get.img = None, alert user
+    * get text msg that user wanna put on img
+    * use canvas. getelementbyid. draw methods
+```
+.
+├── README.md
+├── bin
+│   ├── install
+│   └── run
+├── examples
+│   ├── generate_interface.jpg
+│   └── search_interface.jpg
+├── meme
+│   ├── meme
+│   │   ├── __init__.py
+│   │   ├── api            <---- python files
+│   │   │   ├── __init__.py
+│   │   │   └── main.py
+│   │   ├── config.py
+│   │   ├── js             <---- javascripts files      
+│   │   │   ├── generate.jsx
+│   │   │   ├── main.jsx
+│   │   │   └── search.jsx
+│   │   ├── static         
+│   │   │   └── js         
+│   │   │       └── bundle.js
+│   │   ├── templates      <---- html files
+│   │   │   ├── generate.html
+│   │   │   └── search.html
+│   │   └── views
+│   ├── meme.egg-info
+│   │   ├── PKG-INFO
+│   │   ├── SOURCES.txt
+│   │   ├── dependency_links.txt
+│   │   ├── requires.txt
+│   │   └── top_level.txt
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── setup.py
+│   └── webpack.config.js
+└── package-lock.json
+
+```
+
 
 --------------------------------------------------------
 ## Develop Notes:
@@ -60,17 +112,3 @@ A React/JS web app that lets user search pics, displays search results, then gen
     * fetch a list of img: https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=APIKEY&gallery_id=66911286-72157647277042064&format=json&nojsoncallback=1 || https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=21464a195f014a8659b27ffc98d3ca7c&
 
     * Flickr API: https://idratherbewriting.com/learnapidoc/docapis_flickr_example.html || https://www.flickr.com/services/api/misc.urls.html || https://www.flickr.com/services/api/
-
---------------------------------------------------------
-## Structures:
-
-* search:
-    * display input box, takes query
-    * fetch img from Flickr and display imgs
-    * if user lick on any img, jump to generate: <a href="/generate/img={img_url}">
-* generate:
-    * if request.get.img = None, alert user
-    * get text msg that user wanna put on img
-    * use canvas. getelementbyid. draw methods
-
-
