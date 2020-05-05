@@ -28,7 +28,7 @@ A React/JS web app that lets user search pics, displays search results, then gen
 
 --------------------------------------------------------
 
-## Install Instruction:
+## Install Instructions:
 
 1. Download the repo by 
     * git clone https://github.com/yiransii/Meme-Generator.git
@@ -62,7 +62,7 @@ A React/JS web app that lets user search pics, displays search results, then gen
     * Flickr API: https://idratherbewriting.com/learnapidoc/docapis_flickr_example.html || https://www.flickr.com/services/api/misc.urls.html || https://www.flickr.com/services/api/
 
 --------------------------------------------------------
-## structure:
+## Structures:
 
 * search:
     * display input box, takes query
