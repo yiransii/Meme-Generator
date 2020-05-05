@@ -42,42 +42,6 @@ class SearchObj extends React.Component {
         url += "&api_key=" + api_key;
         url += "&tags=" + tags;
         url += "&format=json&nojsoncallback=1";
-
-        console.log("url");
-        console.log(url);
-
-        // fetch(url)
-        //     .then((response) => {
-        //         if (!response.ok) {
-        //             console.log("response error!!!!");
-        //             throw Error(response.statusText);
-        //         }
-        //         console.log("response ok");
-        //         return response.json();
-        //     })
-        //     .then((data)=>{
-        //         console.log("data!!!");
-        //         console.log(data)
-        //         let urlss = []
-        //         let i;
-        //         for (i = 0; i < data.photos.photo.length; ++i) {
-        //             let farmid = data.photos.photo[i].farm;
-        //             let server = data.photos.photo[i].server;
-        //             let id = data.photos.photo[i].id;
-        //             let secret = data.photos.photo[i].secret;
-        //             var img = String.format("https://farm{0}.staticflickr.com/{1}/{2}_{3}.jpg", farmid, server, id, secret);
-        //             urlss = urlss.concat(img);
-        //         }
-        //         console.log(urlss)
-        //         this.setState({
-        //             query:"cat",
-        //             imgs: urlss, 
-        //         });
-        //         console.log("cur state");
-        //         console.log(this.state);
-                
-        //     })
-        //     .catch((error)=>console.log(error))
     }
 
     submitQuery(event) {
@@ -87,6 +51,12 @@ class SearchObj extends React.Component {
         let newinput = document.getElementById("query").value;
         let newquery = newinput.toString();
         console.log(newquery)
+        
+        // error checking
+        if (newquery.length == 0) {
+            alert("Empty Query!");
+        }
+
         var url = getFlickrUrl(newquery);
 
         console.log("url");
@@ -129,31 +99,29 @@ class SearchObj extends React.Component {
 
     handleImgClick(event) {
         event.preventDefault();
-        // console.log("img that got clicked: url");
-        // console.log(event.target.id);
-        // either keep this function, and send a get request to generate.html
         let targetimg = event.target.id.toString();
         let url = "/generate/?img=";
         console.log("img that got clicked: url");
         url += targetimg;
         console.log(url);
         window.location.replace(url);
-        // fetch(url, { method: 'POST'})
-        // or just use <a href=/generate/ + "img url"> just jump to the other
-        // or just use a bool(selected), and generate different things 
     }
 
     render() {
-        console.log("render");
+        console.log("render!!!!!!!!!!!!!!!!!!!!!!!! once ");
         const {imgs} = this.state;
 
         return (
             <div>
+                <p>
                 <form onSubmit={this.submitQuery}>
+                    Please enter your query: 
                     <input id="query" type="text"/>
+                    <button type="submit">Search</button>
                 </form>
+                </p>
                 {imgs.map((img) => (
-                    <img src={img} id={img} width="300" height="300" onClick={this.handleImgClick} />
+                    <img key={img} src={img} id={img} width="300" height="300" onClick={this.handleImgClick} />
                 ))}
             </div>
 
