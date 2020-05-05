@@ -72,6 +72,9 @@ class SearchObj extends React.Component {
                 return response.json();
             })
             .then((data)=>{
+                if (data.photos.photo.length == 0) {
+                    alert("No image found! Please try again");
+                }
                 console.log("data!!!");
                 console.log(data)
                 let urlss = []

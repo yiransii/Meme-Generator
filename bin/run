@@ -2,6 +2,11 @@
 
 set -Eeuo pipefail
 
+set +u
+source env/bin/activate
+set -u
+
+cd meme 
 echo "run meme generator"
 
 export FLASK_DEBUG=True

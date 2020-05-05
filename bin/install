@@ -1,9 +1,21 @@
-#!/bin/bash
-
 set -Eeuo pipefail
 set -x
 
+# ======= python 
+
 python3 -m venv env
+
+set +u
+source env/bin/activate
+set -u
+
+pip install flask
+
+pip install -e meme 
+
+deactivate
+
+# ======javascript 
 
 set +u
 source env/bin/activate
@@ -12,8 +24,3 @@ set -u
 pip install nodeenv
 nodeenv --python-virtualenv
 deactivate
-source env/bin/activate
-
-
-pip install -e meme 
-npm install .
