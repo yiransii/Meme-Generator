@@ -5,18 +5,19 @@ A React/JS web app that lets user search pics, displays search results, then gen
 
 ## How it works:
 
-1: provide an input that allows a user 
+1. provide an input that allows a user 
+2. search for images on Flickr that match a given string
+3. present search results:  images 
+4. then allow a user to select one 
+5. allow a user to enter some text that appears on top and bottom of the image
 
-2: search for images on Flickr that match a given string
 
-3: present search results:  images 
-
-4: then allow a user to select one 
-
-5: allow a user to enter some text that appears above, below or as an overlay on top of the image
 --------------------------------------------------------
 
 ## Interfaces:
+
+* 50 sec youtube clip:
+    * https://youtu.be/vBtyZzfLBXM
 
 * Search Interface:
     * ![](examples/search_interface.jpg)
@@ -24,8 +25,6 @@ A React/JS web app that lets user search pics, displays search results, then gen
 * Generate Interface:
     * ![](examples/generate_interface.jpg)
 
-* 50 sec youtube clip:
-    * https://youtu.be/vBtyZzfLBXM
 
 --------------------------------------------------------
 
@@ -70,7 +69,7 @@ A React/JS web app that lets user search pics, displays search results, then gen
     * fetch img from Flickr and display imgs
     * if user lick on any img, jump to generate: <a href="/generate/img={img_url}">
 * generate:
-    * if request.get.img = None, ??? falt hadling 
+    * if request.get.img = None, alert user
     * get text msg that user wanna put on img
     * use canvas. getelementbyid. draw methods
 
