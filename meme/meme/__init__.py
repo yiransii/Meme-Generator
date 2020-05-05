@@ -10,10 +10,4 @@ app = flask.Flask(__name__)  # pylint: disable=invalid-name
 # going to tell pylint and pycodestyle to ignore this coding style violation.
 # import meme.api  # noqa: E402  pylint: disable=wrong-import-position
 import meme.api
-import meme.views
 
-# from index.api.search import startup  # noqa: E402  pylint: disable=wrong-import-position
-
-# startup()
-# main()
-# meme.main.test()
