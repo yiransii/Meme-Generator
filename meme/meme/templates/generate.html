@@ -7,7 +7,6 @@
             <h1 style="position: fixed; top: 50px; text-align: center; padding-left: 43%;">Meme Generator</h1>
         </div>
         
-        
         <style>
             .h1 {font-family: Arial, Helvetica, sans-serif;  background-color: royalblue; color:white; text-align: center;}
             body {font-family: Arial, Helvetica, sans-serif; color:royalblue; text-align: center;}
@@ -15,22 +14,21 @@
     </head>
 
     <body>
+        <!-- share on twitter button -->
         <p>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <!-- <a href="#" class="fa fa-facebook"></a> -->
             <a href="https://twitter.com/intent/tweet" class="fa fa-twitter">Share on Twitter</a>
-            <!-- <a href="#" class="fa fa-youtube"></a>
-            <a href="#" class="fa fa-google"></a> -->
         </p>
-
         <a href="/search/"><button>Return to Search Page</button></a>
 
+        <!-- main components of adding text to picture -->
         <div id="reactEntry">Loading...</div>
         <script type="text/javascript" src="{{url_for('static', filename="js/bundle.js")}}"></script>
         <p>
             <canvas id="meme-canvas"></canvas>
         </p>
 
+        <!-- footer -->
         <div style="position: relative; background-color: royalblue; height: 100px; color:white; font-size:medium ; text-align: center; padding-top: 5%; ">    
             Report an issue: yiransi@umich.edu
         </div>

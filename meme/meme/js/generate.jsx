@@ -7,11 +7,8 @@ class GenerateObj extends React.Component {
     constructor(props) {
         super(props)
         const queryString = window.location.search;
-        console.log("querystring")
-        console.log(queryString)
         const urlParams = new URLSearchParams(queryString);
         const imgUrl = urlParams.get('img')
-        console.log(imgUrl);
         this.state = {
             origin_img: imgUrl,
         }
@@ -19,12 +16,10 @@ class GenerateObj extends React.Component {
 
     }
 
-
+    // take input texts and add texts to img, both on the top and the bottom.
     submitQuery(event) {
         event.preventDefault();
-        console.log("!!!!!submitted query");
         let top_text = document.getElementById('top').value;
-        // console.log(text);
         let bottom_text = document.getElementById('bottom').value;
 
         let origin_img = document.getElementById('img');
@@ -54,7 +49,7 @@ class GenerateObj extends React.Component {
             ctx.fillText(bottom_text, canvas.width/2, canvas.height - fontsize/2, canvas.width);
             ctx.strokeText(bottom_text, canvas.width/2, canvas.height - fontsize/2, canvas.width);
         }
-        event.target.reset(); // TODO: reset not working 
+        event.target.reset(); 
 
     }
 
