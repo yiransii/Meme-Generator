@@ -114,11 +114,11 @@ class SearchObj extends React.Component {
         return (
             <div>
                 <p>
-                <form onSubmit={this.submitQuery}>
-                    Please enter your query: 
-                    <input id="query" type="text"/>
-                    <button type="submit">Search</button>
-                </form>
+                    <form onSubmit={this.submitQuery}>
+                        Please enter your query: 
+                        <input id="query" type="text"/>
+                        <button type="submit">Search</button>
+                    </form>
                 </p>
                 {imgs.map((img) => (
                     <img key={img} src={img} id={img} width="300" height="300" onClick={this.handleImgClick} />
