@@ -30,12 +30,12 @@ A React/JS web app that lets user search pics, displays search results, then gen
 
 ## Install Instructions:
 
-1. Download the repo by 
+1. Download the repo and unzip
     * git clone https://github.com/yiransii/Meme-Generator.git
     * Or, download ZIP on github repo main page
 2. Navigate to directory Meme-Generator-master
 3. Run the following command: ./bin/install
-4. Run the following command: ./bin/install
+4. Run the following command: ./bin/run
 5. Open a browser(chrome preferred), and navigate to localhost:8000/search/
 
 --------------------------------------------------------
