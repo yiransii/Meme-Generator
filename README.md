@@ -2,7 +2,10 @@
 
 A React/JS web app that lets user search pics, displays search results, then generates a meme with a user chosen image and input texts.
 --------------------------------------------------------
+## Check it out
+https://gnrmeme.herokuapp.com/
 
+--------------------------------------------------------
 ## How it works:
 
 1. provide an input that allows a user 
