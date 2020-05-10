@@ -1,117 +1,68 @@
-# Meme-Generator
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-A React/JS web app that lets user search pics, displays search results, then generates a meme with a user chosen image and input texts.
---------------------------------------------------------
-## Check it out
-https://gnrmeme.herokuapp.com/
+## Available Scripts
 
---------------------------------------------------------
-## How it works:
+In the project directory, you can run:
 
-1. provide an input that allows a user 
-2. search for images on Flickr that match a given string
-3. present search results:  images 
-4. then allow a user to select one 
-5. allow a user to enter some text that appears on top and bottom of the image
+### `npm start`
 
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
---------------------------------------------------------
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Interfaces:
+### `npm test`
 
-* 50 sec youtube clip:
-    * https://youtu.be/vBtyZzfLBXM
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-* Search Interface:
-    * ![](examples/search_interface.jpg)
+### `npm run build`
 
-* Generate Interface:
-    * ![](examples/generate_interface.jpg)
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
---------------------------------------------------------
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Install Instructions:
+### `npm run eject`
 
-1. Download the repo and unzip
-    * git clone https://github.com/yiransii/Meme-Generator.git
-    * Or, download ZIP on github repo main page
-2. Navigate to directory Meme-Generator-master
-3. Run the following command: ./bin/install
-4. Run the following command: ./bin/run
-5. Open a browser(chrome preferred), and navigate to localhost:8000/search/
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
---------------------------------------------------------
-## Install Errors:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-1. port 8000 already in use:
-    * modify [--port 8000] in the last line in /bin/run to any available port on your local machine. e.g. [--port 8888]
-2. package not found:
-    * please install missing packages with pip, or sudo apt get, or brew install
-3. others:
-    * please let me know: yiransi@umich.edu
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
---------------------------------------------------------
-## Structures:
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-* search:
-    * display input box, takes query
-    * fetch img from Flickr and display imgs
-    * if user lick on any img, jump to generate: <a href="/generate/img={img_url}">
-* generate:
-    * if request.get.img = None, alert user
-    * get text msg that user wanna put on img
-    * use canvas. getelementbyid. draw methods
-```
-.
-├── README.md
-├── bin
-│   ├── install
-│   └── run
-├── examples
-│   ├── generate_interface.jpg
-│   └── search_interface.jpg
-├── meme
-│   ├── meme
-│   │   ├── __init__.py
-│   │   ├── api            <---- python files
-│   │   │   ├── __init__.py
-│   │   │   └── main.py
-│   │   ├── config.py
-│   │   ├── js             <---- javascripts files      
-│   │   │   ├── generate.jsx
-│   │   │   ├── main.jsx
-│   │   │   └── search.jsx
-│   │   ├── static         
-│   │   │   └── js         
-│   │   │       └── bundle.js
-│   │   ├── templates      <---- html files
-│   │   │   ├── generate.html
-│   │   │   └── search.html
-│   │   └── views
-│   ├── meme.egg-info
-│   │   ├── PKG-INFO
-│   │   ├── SOURCES.txt
-│   │   ├── dependency_links.txt
-│   │   ├── requires.txt
-│   │   └── top_level.txt
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── setup.py
-│   └── webpack.config.js
-└── package-lock.json
+## Learn More
 
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
---------------------------------------------------------
-## Develop Notes:
+### Code Splitting
 
-1. For javascript: npx webpack --watch 
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-2. Flickr API usage:
-    *  The Photo Source URLs page in the documentation explains it: You can construct the source URL to a photo once you know its ID, server ID, farm ID, and secret, as returned by many API methods. The URL takes the following format: https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+### Analyzing the Bundle Size
 
-    * fetch a list of img: https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=APIKEY&gallery_id=66911286-72157647277042064&format=json&nojsoncallback=1 || https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=21464a195f014a8659b27ffc98d3ca7c&
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-    * Flickr API: https://idratherbewriting.com/learnapidoc/docapis_flickr_example.html || https://www.flickr.com/services/api/misc.urls.html || https://www.flickr.com/services/api/
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
