@@ -33,3 +33,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ```
 ---------------------------------------------------------------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+---------------------------------------------------------------------------------------------------
+## For the other version built with Python package and JavaScript package that could support a database, please check out the master. Current branch is mainly for the purpose of deployment.
